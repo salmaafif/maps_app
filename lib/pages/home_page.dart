@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:maps_app/pages/maps_v1_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -59,7 +60,14 @@ class HomePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 50),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const MapsV1Page(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.red,
                     ),
